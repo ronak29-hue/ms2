@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: course-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coursedb
+    username: user
+    password: pwd
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9098
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "course-service"
+    description: "This is course service"
+    version: "1.0"
