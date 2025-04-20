@@ -1,4 +1,4 @@
-package com.category.services.entites;
+package com.category.entites;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
